@@ -40,13 +40,13 @@ onMounted(async () => {
 
 // Ambil data dari server
 const getData = async () => {
-  const res = await axios.get('http://localhost:3000/wisata')
+  const res = await axios.get('https://device-whom-crucial-conservative.trycloudflare.com/wisata')
   wisata.value = res.data
 }
 
 // Tambah data baru
 const tambahWisata = async () => {
-  await axios.post('http://localhost:3000/wisata', {
+  await axios.post('https://device-whom-crucial-conservative.trycloudflare.com/wisata', {
     nama: form.value.nama,
     lokasi: form.value.lokasi,
     deskripsi: form.value.deskripsi,
@@ -57,7 +57,7 @@ const tambahWisata = async () => {
 
 // Hapus data
 const hapusWisata = async (id) => {
-  await axios.delete(`http://localhost:3000/wisata/${id}`)
+  await axios.delete(`https://device-whom-crucial-conservative.trycloudflare.com/wisata/${id}`)
   await getData()
 }
 
@@ -69,7 +69,7 @@ const editItem = (item) => {
 
 // Update data (PUT)
 const updateWisata = async () => {
-  await axios.put(`http://localhost:3000/wisata/${form.value.id}`, {
+  await axios.put(`https://device-whom-crucial-conservative.trycloudflare.com/wisata/${form.value.id}`, {
     nama: form.value.nama,
     lokasi: form.value.lokasi,
     deskripsi: form.value.deskripsi,
